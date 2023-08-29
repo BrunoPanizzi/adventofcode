@@ -1,5 +1,5 @@
 fun main() {
-    val day = 1
+    val day = 2
 
     days.runDay(day)
 }

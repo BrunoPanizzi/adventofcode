@@ -6,6 +6,7 @@ fun runDay(day: Int) {
         !in 1..25 -> throw IndexOutOfBoundsException("Day outside valid range.")
 
         1 -> days.day1.run()
+        2 -> days.day2.run()
 
         else -> throw NotImplementedError("Day not implemented.")
     }
