@@ -3,34 +3,26 @@ package days.day1
 import java.io.File
 
 fun run() {
-    val filePath = System.getProperty("user.dir") + "/src/main/days/day1/in.txt"
-    val input = File(filePath).readText()
+    val input = File("src/main/days/day1/in.txt").readLines()
 
     println("Part 1 result: ${part1(input)}")
     println("Part 2 result: ${part2(input)}")
 }
 
-// TODO: make this more elegant, using maps and stuff
-fun part1(input: String): Int {
-    val lines = input.split("\n").map { it.trim()}
+// this can be a one-liner, but it would look weird
+fun part1(input: List<String>): Int {
+    val elves: List<List<String>> = input
+        .joinToString("\n") { it.trim() }
+        .split("\n\n")
+        .map { it.split("\n") }
 
-    var sum = 0
-    var max = 0
+    val elvesSum: List<Int> = elves.map { elf -> elf.sumOf { Integer.valueOf(it) } }
 
-    for (line in lines) {
-        if (line.isBlank()) {
-            max = if (sum > max) sum else max
-            sum = 0
-        } else {
-            sum += Integer.valueOf(line)
-        }
-    }
-
-    return max
+    return elvesSum.max()
 }
 
-fun part2(input: String): Int {
-    val lines = input.split("\n").map { it.trim()}
+fun part2(input: List<String>): Int {
+    val lines = input.map { it.trim() }
     val elves = mutableListOf<Int>()
 
     var sum = 0
