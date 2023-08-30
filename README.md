@@ -4,7 +4,7 @@ These are my solutions to [advent of code](https://adventofcode.com) (2022) usin
 
 ## Days completed
 - [x] **Day 1:** Calorie Counting 
-- [x] **Day 2:** Rock Paper Scissors
+- [ ] **Day 2:** Rock Paper Scissors
 - [ ] **Day 3:** Rucksack Reorganization
 - [ ] **Day 4:** Camp Cleanup
 - [ ] **Day 5:** Supply Stacks
