@@ -7,7 +7,7 @@ These are my solutions to [advent of code](https://adventofcode.com) (2022) usin
 - [x] **Day 2:** Rock Paper Scissors
 - [x] **Day 3:** Rucksack Reorganization
 - [x] **Day 4:** Camp Cleanup
-- [ ] **Day 5:** Supply Stacks
+- [x] **Day 5:** Supply Stacks
 - [ ] **Day 6:** Tuning Trouble
 - [ ] **Day 7:** No Space Left On Device
 - [ ] **Day 8:** Treetop Tree House
