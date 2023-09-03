@@ -1,5 +1,5 @@
 fun main() {
-    val day = 5
+    val day = 6
 
     println("Running day $day")
     days.runDay(day)

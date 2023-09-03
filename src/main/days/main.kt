@@ -10,6 +10,7 @@ fun runDay(day: Int) {
         3 -> days.day3.run()
         4 -> days.day4.run()
         5 -> days.day5.run()
+        6 -> days.day6.run()
 
         else -> throw NotImplementedError("Day not implemented.")
     }
