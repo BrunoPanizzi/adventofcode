@@ -9,7 +9,7 @@ These are my solutions to [advent of code](https://adventofcode.com) (2022) usin
 - [x] **Day 4:** Camp Cleanup
 - [x] **Day 5:** Supply Stacks
 - [x] **Day 6:** Tuning Trouble
-- [ ] **Day 7:** No Space Left On Device
+- [x] **Day 7:** No Space Left On Device
 - [ ] **Day 8:** Treetop Tree House
 - [ ] **Day 9:** Rope Bridge
 - [ ] **Day 10:** Cathode-Ray Tube
