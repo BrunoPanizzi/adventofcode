@@ -47,17 +47,22 @@ fun charToHeight(char: Char): Int {
 
 /**
  * Parses the input into a network of cells, then returns the starting cell.
- *
- * Might return a pair with the end cell too, we'll see.
  */
 fun parseInput(input: List<List<Char>>): Cell {
-    var start: Cell? = null
+    return parseInput(input, 'S').firstOrNull() ?: throw Exception("Starting cell not found")
+}
+
+/**
+ * Parses the input into a network of cells, then returns all the cells with the specified char.
+ */
+fun parseInput(input: List<List<Char>>, char: Char): List<Cell> {
+    val cells: MutableList<Cell> = mutableListOf()
 
     val cellGrid = input.mapIndexed { y, line ->
         line.mapIndexed { x, it ->
             val cell = Cell(y, x, charToHeight(it), it == 'E')
-            if (it == 'S') {
-                start = cell
+            if (it == char) {
+                cells.add(cell)
             }
             cell
         }
@@ -69,8 +74,9 @@ fun parseInput(input: List<List<Char>>): Cell {
         }
     }
 
-    return start ?: throw Exception("Start cell not found.")
+    return cells
 }
+
 
 fun linkNeighbors(cell: Cell, input: List<List<Cell>>) {
     // the only way to have no top is to be on the very top of the map
@@ -139,12 +145,22 @@ fun part1(input: List<String>): Int {
 
     val end = BFS(root)
 
-    println("Total path size: ${end.pathToLeaf().size}")
-    println("Final node depth: ${end.depth}")
-
     return end.depth
 }
 
 fun part2(input: List<String>): Int {
-    return -1
+    // just do it more times lol
+    val starts = parseInput(input.map { line -> line.map { it } }, 'a')
+
+    val roots = starts.map { Leaf(it, null) }
+
+    val ends: List<Leaf<Cell>> = roots.mapNotNull {
+        try {
+            BFS(it)
+        } catch (e: Exception) {
+            null
+        }
+    }
+
+    return ends.minOf { it.depth }
 }
