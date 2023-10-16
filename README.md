@@ -16,7 +16,7 @@ These are my solutions to [advent of code](https://adventofcode.com) (2022) usin
 - [x] **Day 11:** Monkey in the Middle
 - [x] **Day 12:** Hill Climbing Algorithm
 - [x] **Day 13:** Distress Signal
-- [ ] **Day 14:** Regolith Reservoir
+- [x] **Day 14:** Regolith Reservoir
 - [ ] **Day 15:** Beacon Exclusion Zone
 - [ ] **Day 16:** Proboscidea Volcanium
 - [ ] **Day 17:** Pyroclastic Flow
