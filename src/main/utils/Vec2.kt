@@ -1,5 +1,6 @@
 package utils
 
+import kotlin.math.abs
 import kotlin.math.pow
 import kotlin.math.sqrt
 
@@ -28,4 +29,5 @@ data class Vec2(
 
     private infix fun dst2To(to: Vec2) = (x - to.x).toFloat().pow(2) + (y - to.y).toFloat().pow(2)
     infix fun dstTo(to: Vec2) = sqrt(this dst2To to)
+    infix fun absDstTo(to: Vec2) = abs(this.x - to.x) + abs(this.y - to.y)
 }
